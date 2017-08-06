@@ -35,8 +35,7 @@ int main() {
 			cin>>v[i];
 			r[j] = v[i];
 		}
-		bool a = isEqual(r,v);
-		if(a == true) {
+		if(isEqual(r,v) == true) {
 			cout<<"yes"<<endl;
 		} else {
 			cout<<"no"<<endl;
