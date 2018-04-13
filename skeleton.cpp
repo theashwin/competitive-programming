@@ -28,14 +28,6 @@ typedef vector<pl>		vpl;
 typedef vector<vi>		vvi;
 typedef vector<vl>		vvl;
 
-int main() {
-	ios_base::sync_with_stdio(false);
-	cin.tie(NULL);
-
-
-	return 0;
-}
-
 ll mpow(int base, int exp) {
 	base %= MOD;
 	int result = 1;
@@ -45,4 +37,12 @@ ll mpow(int base, int exp) {
 		exp >>= 1;
 	}
 	return result;
+}
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+
+
+	return 0;
 }
