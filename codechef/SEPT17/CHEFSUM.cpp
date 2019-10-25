@@ -1,3 +1,7 @@
+/* Problem Statement Explained: Calculate Prefix sum + Suffix Sum for all array indices and then print the minimum value index. If minimum 
+value is achieved for two indices , then print the index with smaller value.*/
+
+
 //INCLUDE
 #include <bits/stdc++.h>
 using namespace std;
