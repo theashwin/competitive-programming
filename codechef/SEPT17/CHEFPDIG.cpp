@@ -1,3 +1,5 @@
+/* Chef has a big positive integer N. He can select any two digits from this number (the digits can be same but their positions should be different) and orders them in any one of the two possible ways. For each of these ways, he creates a two digit number from it (might contain leading zeros). Then, he will pick a character corresponding to the ASCII value equal to this number, i.e. the number 65 corresponds to 'A', 66 to 'B' and so on till 90 for 'Z'. Chef is only interested in finding which of the characters in the range 'A' to 'Z' can possibly be picked this way.Output a string containing characters Chef can pick in sorted order If the resulting size of string is zero, you should output a new line. */
+
 //INCLUDE
 #include <bits/stdc++.h>
 using namespace std;
