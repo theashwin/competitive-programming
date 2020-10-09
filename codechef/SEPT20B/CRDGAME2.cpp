@@ -1,3 +1,15 @@
+//https://www.codechef.com/SEPT20A/problems/CRDGAME2/
+
+//A game is played between two players, each with a pile of N<=10^5 cards. 
+//In each turn, both players draw a card from top of their piles. 
+//The player having higher card value wins this round, gets both cards and inserts those to the bottom of his pile.
+//If the value of drawn cards is equal, both players insert their card at the bottom of their respective piles. 
+//For each transfer, the value of card decreases by 1 and when it becomes 0, it is discarded from the game. 
+//The player ending up without any card loses the game. 
+//If the game is a non-ending game, the player having higher sum of cards win. If even the sum of cards is equal, the match ends in draw.
+
+//Find the number of ways to distribute the cards between the players before the start of the game such that there should be a winner.
+
 #include <bits/stdc++.h>
 
 using namespace std;
