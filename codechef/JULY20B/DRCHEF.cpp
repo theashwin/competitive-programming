@@ -1,3 +1,17 @@
+//https://www.codechef.com/problems/DRCHEF
+
+
+//There are N countries with populations a_1,a_2,...,a_n
+// all of them are initially infected with coronavirus.
+//There are X vaccines on day 1. 
+//The cures available on day i+1 is twice the number of cures delivered on day i
+//. The number of cures delivered to some country on some day cannot exceed the number of infected people it currently has. 
+//Also the infection spreads again to the cured people. 
+//The number of infections doubles in a country everyday 
+//(after all cures on that day, and without exceeding the initial population of that country).
+
+//Find the minimum number of days required to cure the world from coronavirus.
+
 
 #include <bits/stdc++.h>
 using namespace std;
