@@ -1,3 +1,11 @@
+//https://www.codechef.com/JUNE20B/problems/CHFICRM/
+
+
+//There exists 3 denominations, Rs 5, Rs 10 and Rs 15. Each ice-cream costs Rs 5.
+//There are N customers. Each customer has a certain denomination with him.
+//He buys an ice-cream from Chef only if Chef can give him change. 
+//Chef initially has no money. Can all the customers buy their ice-cream?
+
 #include <bits/stdc++.h>
 using namespace std;
 
