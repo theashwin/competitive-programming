@@ -1,3 +1,6 @@
+
+//https://www.codechef.com/AUG20A/problems/SKMP/
+//we are given a string s and a pattern p we have to rearrange the string s so that we can find the pattern p in s after the final arrangement
 #include <bits/stdc++.h>
 
 using namespace std;
