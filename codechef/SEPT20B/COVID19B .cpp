@@ -1,3 +1,10 @@
+//https://www.codechef.com/SEPT20A/problems/COVID19B/
+
+//There are N athletes moving with uniform speed on a line. 
+//Initially one of them is infected with a virus, but we don’t know who. 
+//The virus spreads from one athlete to another when they are at the same position.
+//Find the minimum and maximum number of infected athletes in the best and worst possible scenarios.
+
 #include <bits/stdc++.h>
 
 using namespace std;
