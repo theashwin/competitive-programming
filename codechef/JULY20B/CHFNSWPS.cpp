@@ -1,3 +1,8 @@
+//https://www.codechef.com/JULY20B/problems/CHFNSWPS/
+//we are given two arrays A and B of length n.we can applay swap operations on them .
+//in one operation we can select 2 integers iand j and swap A[i] and B[j],and the cost of operation is minimum of A[i] & B[j]
+
+//we have to find the minimum cost to make the 2 arrays identical
 #include <bits/stdc++.h>
 
 using namespace std;
