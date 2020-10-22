@@ -1,0 +1,92 @@
+/* https://www.codechef.com/JUNE20B/problems/XYSTR
+
+There are N students standing in a row and numbered 1 through N from left to right. 
+You are given a string S with length N, where for each valid i, the i-th character of S is 'x' if the i-th student is a girl or 'y' if this student is a boy. 
+Students standing next to each other in the row are friends.
+The students are asked to form pairs for a dance competition. Each pair must consist of a boy and a girl. Two students can only form a pair if they are friends. Each student can only be part of at most one pair. What is the maximum number of pairs that can be formed? */
+
+
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+class Q3xyxy_string {
+
+	public static void main(String[] args) throws IOException{
+		Reader.init(System.in);
+		int t= Reader.nextInt();
+		for(int p=0; p<t;p++) {
+			
+			String n= Reader.next();
+			
+			char[] ch= n.toCharArray();
+			int [] visited= new int[n.length()];
+			
+			int sum=0;
+			
+			if(n.length()==1) {
+				System.out.println(sum);
+				continue;
+			}
+			
+			if((ch[0]=='x' && ch[1]=='y')|| (ch[0]=='y' && ch[1]=='x')) {
+				sum+=1;
+				visited[0]=visited[1]=1;
+			}
+				
+			for(int i=1; i<n.length()-1; i++) {
+				if((ch[i]=='x' && ch[i+1]=='y')|| (ch[i]=='y' && ch[i+1]=='x')) {
+					if(visited[i]!=1 && visited[i+1]!=1) {
+						sum+=1;
+						visited[i]=visited[i+1]=1;
+					}
+				}
+				
+				if((ch[i]=='x' && ch[i-1]=='y')|| (ch[i]=='y' && ch[i-1]=='x')) {
+					if(visited[i]!=1 && visited[i-1]!=1) {
+						sum+=1;
+						visited[i]=visited[i-1]=1;
+					}
+			}
+			
+	}
+
+			System.out.println(sum);
+}
+	}
+}
+
+class Reader {
+    static BufferedReader reader;
+    static StringTokenizer tokenizer;
+    static void init(InputStream input) {
+        reader = new BufferedReader(
+                     new InputStreamReader(input) );
+        tokenizer = new StringTokenizer("");
+    }
+
+    static String next() throws IOException {
+        while ( ! tokenizer.hasMoreTokens() ) {
+
+        	tokenizer = new StringTokenizer(
+                   reader.readLine() );
+        }
+        return tokenizer.nextToken();
+    }
+
+    static int nextInt() throws IOException {
+        return Integer.parseInt( next() );
+    }
+	
+    static double nextDouble() throws IOException {
+        return Double.parseDouble( next() );
+    }
+    static long nextLong() throws IOException {
+        return Long.parseLong( next() );
+    }
+    
+
+}

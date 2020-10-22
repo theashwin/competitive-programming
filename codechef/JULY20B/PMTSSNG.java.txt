@@ -1,0 +1,97 @@
+
+// problem link: https://www.codechef.com/JULY20B/problems/PTMSSNG/
+//Chef has N axis-parallel rectangles in a 2D Cartesian coordinate system. These rectangles may intersect, but it is guaranteed that all their 4N vertices are pairwise distinct.
+
+//Unfortunately, Chef lost one vertex, and up until now, none of his fixes have worked (although putting an image of a point on a milk carton might not have been the greatest idea after all…). Therefore, he gave you the task of finding it! You are given the remaining 4N−1 points and you should find the missing one.
+
+	import java.io.BufferedReader;
+	import java.io.IOException;
+	import java.io.InputStream;
+	import java.io.InputStreamReader;
+	import java.util.HashMap;
+	import java.util.Map.Entry;
+	import java.util.StringTokenizer;
+
+	public class codechef_PTMSSNG {
+
+		public static void main(String[] args) throws IOException{
+			Reader.init(System.in);
+
+			int t=Reader.nextInt();
+			for(int p=0;p<t;p++) {
+				
+				int n= Reader.nextInt();
+				int real= 4*n-1;
+				
+				HashMap<Long, Integer> xaxis= new HashMap<>();
+				HashMap<Long, Integer> yaxis= new HashMap<>();
+				
+				for(int i=0; i<real; i++) {
+					long x=Reader.nextLong();
+					
+					if(xaxis.containsKey(x)==false) {
+						xaxis.put(x,1);
+					}
+					else xaxis.put(x, xaxis.get(x)+1);
+					
+					
+					long y=Reader.nextLong();
+					
+					if(yaxis.containsKey(y)==false) {
+						yaxis.put(y,1);
+					}
+					else yaxis.put(y, yaxis.get(y)+1);
+				}
+				
+				long xfound=0;
+				long yfound=0;
+				for(Entry<Long, Integer> me: xaxis.entrySet()) {
+					if(me.getValue()%2!=0) {
+						xfound=me.getKey();
+						break;
+					}
+				}
+				
+				for(Entry<Long, Integer> me: yaxis.entrySet()) {
+					if(me.getValue()%2!=0) {
+						yfound=me.getKey();
+						break;
+					}
+				}
+				
+				System.out.println(xfound+" "+yfound);
+				
+			}
+		}
+
+	}
+	class Reader {
+	    static BufferedReader reader;
+	    static StringTokenizer tokenizer;
+	    static void init(InputStream input) {
+	        reader = new BufferedReader(
+	                     new InputStreamReader(input) );
+	        tokenizer = new StringTokenizer("");
+	    }
+
+	    static String next() throws IOException {
+	        while ( ! tokenizer.hasMoreTokens() ) {
+
+	        	tokenizer = new StringTokenizer(
+	                   reader.readLine() );
+	        }
+	        return tokenizer.nextToken();
+	    }
+
+	    static int nextInt() throws IOException {
+	        return Integer.parseInt( next() );
+	    }
+		
+	    static double nextDouble() throws IOException {
+	        return Double.parseDouble( next() );
+	    }
+	    static long nextLong() throws IOException {
+	        return Long.parseLong( next() );
+	    }
+	    
+	}
